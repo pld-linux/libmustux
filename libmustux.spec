@@ -5,20 +5,20 @@
 Summary:	Professional Audio Tools for GNU/Linux - a library
 Summary(pl):	Profesjonalne Narzêdzia Audio dla GNU/Linuksa - biblioteka
 Name:		libmustux
-Version:	0.16.0
+Version:	0.19.3
 Release:	0.1
 License:	GPL
 Group:		Libraries
 Source0:	http://savannah.nongnu.org/download/protux/%{name}-%{version}.tar.gz
-# Source0-md5:	62ca8e8bcdda5e3d5e1896f428260bad
-Patch0:		%{name}-acam.patch
+# Source0-md5:	f57c5e4359a91314024c77d01d8e170a
+#Patch0:		%{name}-acam.patch
 URL:		http://www.nongnu.org/protux/mustux.html
 %{!?_without_alsa:BuildRequires:	alsa-lib-devel}
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	qt-devel
 BuildRequires:	libtool
 BuildRequires:	perl-base
+BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -72,15 +72,15 @@ Statyczna biblioteka libmustux.
 
 %prep
 %setup -q
-%patch -p1
+#%patch0 -p1
 
 %build
+rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%{__perl} admin/am_edit Makefile.in
 %configure \
 	--enable-static \
 	%{?_without_alsa:--disable-alsa}
@@ -101,7 +101,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYRIGHT ChangeLog NEWS README TODO
+%doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_libdir}/lib*.so.*.*.*
 
 %files devel
