@@ -13,7 +13,10 @@ BuildRequires:	alsa-lib-devel >= 0.9.0
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool >= 2:1.4d
-BuildRequires:	libvorbis-devel
+# checked for, but not used at all
+#BuildRequires:	libogg-devel
+# test commented out in configure
+#BuildRequires:	libvorbis-devel
 BuildRequires:	perl-base
 BuildRequires:	qt-devel >= 2.3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -47,7 +50,6 @@ Summary(pl):	Pliki nag³ówkowe biblioteki libmustux
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	alsa-lib-devel >= 0.9.0
-Requires:	libvorbis-devel
 Requires:	qt-devel >= 2.3.0
 
 %description devel
