@@ -6,17 +6,18 @@ Summary:	Professional Audio Tools for GNU/Linux - a library
 Summary(pl):	Profesjonalne Narzêdzia Audio dla GNU/Linuksa - biblioteka
 Name:		libmustux
 Version:	0.19.3
-Release:	0.1
+Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://savannah.nongnu.org/download/protux/%{name}-%{version}.tar.gz
 # Source0-md5:	f57c5e4359a91314024c77d01d8e170a
-#Patch0:		%{name}-acam.patch
+Patch0:		%{name}-acam.patch
 URL:		http://www.nongnu.org/protux/mustux.html
 %{!?_without_alsa:BuildRequires:	alsa-lib-devel}
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
+BuildRequires:	libvorbis-devel
 BuildRequires:	perl-base
 BuildRequires:	qt-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -72,7 +73,7 @@ Statyczna biblioteka libmustux.
 
 %prep
 %setup -q
-#%patch0 -p1
+%patch0 -p1
 
 %build
 rm -f missing
