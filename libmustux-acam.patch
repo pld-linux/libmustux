@@ -1,12 +1,11 @@
-diff -urN libmustux-0.19.3/Makefile.am libmustux-0.19.3.new/Makefile.am
---- libmustux-0.19.3/Makefile.am	2003-08-13 20:55:34.000000000 +0200
-+++ libmustux-0.19.3.new/Makefile.am	2003-08-19 11:36:00.000000000 +0200
+--- libmustux-0.20.1/Makefile.am	2003-08-13 20:55:34.000000000 +0200
++++ libmustux-0.20.1.new/Makefile.am	2003-08-19 11:36:00.000000000 +0200
 @@ -6,7 +6,7 @@
  
  lib_LTLIBRARIES = libmustux.la
  libmustux_la_LDFLAGS = -version-info 0:1:0
 -
-+libmustux_la_LIBADD = @QT_LIBS@ -lvorbisfile -lvorbis
++libmustux_la_LIBADD = @QT_LIBS@
  libmustux_la_SOURCES = \
  MustuxApplication.cc \
  MustuxAudioDeviceMapper.cc \
