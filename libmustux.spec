@@ -1,25 +1,21 @@
-#
-# Conditional build:
-# _without_alsa	- without ALSA support
-#
 Summary:	Professional Audio Tools for GNU/Linux - a library
 Summary(pl):	Profesjonalne Narzêdzia Audio dla GNU/Linuksa - biblioteka
 Name:		libmustux
-Version:	0.20.0
+Version:	0.20.1
 Release:	1
 License:	GPL
 Group:		Libraries
 Source0:	http://savannah.nongnu.org/download/protux/%{name}-%{version}.tar.gz
-# Source0-md5:	dab777e2f64928c97b125865c031f719
+# Source0-md5:	2b65d686a867232095c4a89b44b3e415
 Patch0:		%{name}-acam.patch
 URL:		http://www.nongnu.org/protux/mustux.html
-%{!?_without_alsa:BuildRequires:	alsa-lib-devel}
-BuildRequires:	autoconf
+BuildRequires:	alsa-lib-devel >= 0.9.0
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:1.4d
 BuildRequires:	libvorbis-devel
 BuildRequires:	perl-base
-BuildRequires:	qt-devel
+BuildRequires:	qt-devel >= 2.3.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -49,9 +45,10 @@ projektu.
 Summary:	Header files for libmustux library
 Summary(pl):	Pliki nag³ówkowe biblioteki libmustux
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
-%{!?_without_alsa:Requires:	alsa-lib-devel}
-Requires:	qt-devel
+Requires:	%{name} = %{version}-%{release}
+Requires:	alsa-lib-devel >= 0.9.0
+Requires:	libvorbis-devel
+Requires:	qt-devel >= 2.3.0
 
 %description devel
 Header files for libmustux library.
@@ -63,7 +60,7 @@ Pliki nag³ówkowe biblioteki libmustux.
 Summary:	Static libmustux library
 Summary(pl):	Statyczna biblioteka libmustux
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libmustux library.
@@ -76,7 +73,6 @@ Statyczna biblioteka libmustux.
 %patch0 -p1
 
 %build
-rm -f missing
 %{__libtoolize}
 %{__aclocal}
 %{__autoconf}
@@ -84,7 +80,7 @@ rm -f missing
 %{__automake}
 %configure \
 	--enable-static \
-	%{?_without_alsa:--disable-alsa}
+	%{!?with_alsa:--disable-alsa}
 
 %{__make}
 
