@@ -2,7 +2,7 @@ Summary:	Professional Audio Tools for GNU/Linux - a library
 Summary(pl):	Profesjonalne Narzêdzia Audio dla GNU/Linuksa - biblioteka
 Name:		libmustux
 Version:	0.20.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	http://savannah.nongnu.org/download/protux/%{name}-%{version}.tar.gz
@@ -82,7 +82,7 @@ Statyczna biblioteka libmustux.
 %{__automake}
 %configure \
 	--enable-static \
-	%{!?with_alsa:--disable-alsa}
+	--with-qt-lib-dir=%{_libdir}
 
 %{__make}
 
