@@ -1,5 +1,5 @@
 Summary:	Professional Audio Tools for GNU/Linux - a library
-Summary(pl):	Profesjonalne NarzÍdzia Audio dla GNU/Linuksa - biblioteka
+Summary(pl.UTF-8):   Profesjonalne Narzƒôdzia Audio dla GNU/Linuksa - biblioteka
 Name:		libmustux
 Version:	0.20.1
 Release:	2
@@ -32,21 +32,21 @@ simulate an analogic device, such jog/shuttle rings, sliders, and
 other fast manipulation input handlers. Protux and Mustache are some
 of the tools that are part of this project.
 
-%description -l pl
-Mustux to projekt paradygmatu narzÍdzi muzycznych. Jest to inicjatywa
-stworzenia zestawu narzÍdzi dla muzykÛw opartego na ujednoliconej
-koncepcji; narzÍdzia mog± oferowaÊ innowacyjny interfejs poprzez
-uøycie akcji klawiatury i myszy bez øadnego klikniÍcia mysz±. Naleøy
-zauwaøyÊ, øe nie chodzi o "skrÛty". SkrÛty to akcje klawiatury
-wywo≥uj±ce procedury obs≥ugi przyciskÛw/ikon/widgetÛw. Akcje JMB
-prÛbuj± symulowaÊ urz±dzenia analogowe, takie jak pier∂cienie
-jog/shuttle, slidery i inne do szybkiego manipulowania wej∂ciami.
-Protux i Mustache to przyk≥adowe narzÍdzia bÍd±ce czÍ∂ci± tego
+%description -l pl.UTF-8
+Mustux to projekt paradygmatu narzƒôdzi muzycznych. Jest to inicjatywa
+stworzenia zestawu narzƒôdzi dla muzyk√≥w opartego na ujednoliconej
+koncepcji; narzƒôdzia mogƒÖ oferowaƒá innowacyjny interfejs poprzez
+u≈ºycie akcji klawiatury i myszy bez ≈ºadnego klikniƒôcia myszƒÖ. Nale≈ºy
+zauwa≈ºyƒá, ≈ºe nie chodzi o "skr√≥ty". Skr√≥ty to akcje klawiatury
+wywo≈ÇujƒÖce procedury obs≈Çugi przycisk√≥w/ikon/widget√≥w. Akcje JMB
+pr√≥bujƒÖ symulowaƒá urzƒÖdzenia analogowe, takie jak pier≈õcienie
+jog/shuttle, slidery i inne do szybkiego manipulowania wej≈õciami.
+Protux i Mustache to przyk≈Çadowe narzƒôdzia bƒôdƒÖce czƒô≈õciƒÖ tego
 projektu.
 
 %package devel
 Summary:	Header files for libmustux library
-Summary(pl):	Pliki nag≥Ûwkowe biblioteki libmustux
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe biblioteki libmustux
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	alsa-lib-devel >= 0.9.0
@@ -55,19 +55,19 @@ Requires:	qt-devel >= 2.3.0
 %description devel
 Header files for libmustux library.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe biblioteki libmustux.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe biblioteki libmustux.
 
 %package static
 Summary:	Static libmustux library
-Summary(pl):	Statyczna biblioteka libmustux
+Summary(pl.UTF-8):   Statyczna biblioteka libmustux
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libmustux library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libmustux.
 
 %prep
