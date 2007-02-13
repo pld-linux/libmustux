@@ -1,5 +1,5 @@
 Summary:	Professional Audio Tools for GNU/Linux - a library
-Summary(pl.UTF-8):   Profesjonalne Narzędzia Audio dla GNU/Linuksa - biblioteka
+Summary(pl.UTF-8):	Profesjonalne Narzędzia Audio dla GNU/Linuksa - biblioteka
 Name:		libmustux
 Version:	0.20.1
 Release:	2
@@ -46,7 +46,7 @@ projektu.
 
 %package devel
 Summary:	Header files for libmustux library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libmustux
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libmustux
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	alsa-lib-devel >= 0.9.0
@@ -60,7 +60,7 @@ Pliki nagłówkowe biblioteki libmustux.
 
 %package static
 Summary:	Static libmustux library
-Summary(pl.UTF-8):   Statyczna biblioteka libmustux
+Summary(pl.UTF-8):	Statyczna biblioteka libmustux
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
